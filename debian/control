@@ -4,15 +4,15 @@ Priority: optional
 Maintainer: Bardia Moshiri <fakeshell@bardia.tech>
 Build-Depends: debhelper-compat (= 13),
                cmake,
-               qtbase5-dev,
-               qtchooser,
-               libqt5dbus5,
-               libqt5core5a,
-               libqt5network5,
+               qt6-base-dev,
+               libqt6dbus6,
+               libqt6core6,
+               libqt6network6,
                android-headers,
                libhybris-dev,
                g++,
                libc6-dev,
+Standards-Version: 4.5.1
 
 Package: droidian-fpd
 Architecture: any

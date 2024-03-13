@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.10)
 project(droidian-fpd)
 
 set(CMAKE_AUTOMOC ON)
-find_package(Qt5DBus REQUIRED)
+find_package(Qt6DBus REQUIRED)
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 link_libraries(hybris-common)
@@ -26,7 +26,7 @@ set(HEADERS
 
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
 
-target_link_libraries(${PROJECT_NAME} Qt5::DBus)
+target_link_libraries(${PROJECT_NAME} Qt6::DBus)
 
 install(TARGETS ${PROJECT_NAME} DESTINATION /usr/bin/)
 install(FILES org.droidian.fingerprint.conf DESTINATION /etc/dbus-1/system.d/)
