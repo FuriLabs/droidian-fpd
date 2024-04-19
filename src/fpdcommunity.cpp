@@ -33,8 +33,8 @@ FPDCommunity::FPDCommunity()
     m_cancelTimer.setInterval(30000);
     connect(&m_cancelTimer, &QTimer::timeout, this, &FPDCommunity::slot_cancelIdentify);
 
-    // set current user - nemo for now
-    setUser(100000);
+    // set current user - hybris for now
+    setUser(32011);
     registerDBus();
 }
 
@@ -237,7 +237,7 @@ int FPDCommunity::Enroll(const QString &finger, const QDBusMessage &message)
         setState(FPSTATE_ENROLLING);
         m_addingFinger = finger;
         m_dbusCaller = caller;
-        m_androidFP.enroll(100000); //nemo userID
+        m_androidFP.enroll(32011); // hybris userID
         emit EnrollProgressChanged(0);
         return FPREPLY_STARTED;
     }
@@ -336,7 +336,7 @@ int FPDCommunity::Verify(const QDBusMessage &message)
 
     if (m_state == FPSTATE_IDLE) {
         setState(FPSTATE_VERIFYING);
-        m_androidFP.enroll(100000); //nemo userID
+        m_androidFP.enroll(32011); // hybris userID
         m_dbusCaller = caller;
         emit EnrollProgressChanged(0);
         return FPREPLY_STARTED;
