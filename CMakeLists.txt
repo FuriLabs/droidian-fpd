@@ -28,5 +28,5 @@ add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
 
 target_link_libraries(${PROJECT_NAME} Qt6::DBus)
 
-install(TARGETS ${PROJECT_NAME} DESTINATION /usr/bin/)
+install(TARGETS ${PROJECT_NAME} DESTINATION /usr/sbin/)
 install(FILES org.droidian.fingerprint.conf DESTINATION /etc/dbus-1/system.d/)

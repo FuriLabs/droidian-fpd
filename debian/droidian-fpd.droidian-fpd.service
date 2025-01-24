@@ -6,7 +6,7 @@ After=lxc@android.service
 Type=dbus
 BusName=org.droidian.fingerprint
 ExecStartPre=/usr/bin/binder-wait android.hardware.biometrics.fingerprint@2.1::IBiometricsFingerprint/default
-ExecStart=/usr/bin/droidian-fpd
+ExecStart=/usr/sbin/droidian-fpd
 Restart=always
 RestartSec=5
 
