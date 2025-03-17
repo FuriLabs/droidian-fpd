@@ -145,7 +145,6 @@ private:
     QTimer m_cancelTimer;
 
     bool m_dbusRegistered = false;
-    QString m_dbusCaller;
 
     QString m_fingerDatabasePath;
     QMap<uint32_t, QString> m_fingerMap;
